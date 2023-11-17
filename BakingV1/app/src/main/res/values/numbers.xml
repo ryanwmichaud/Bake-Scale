@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="rowHeight"> 60dp </dimen>
+    <dimen name="hMargin"> 20dp </dimen>
+    <dimen name="vMargin"> 20dp </dimen>
+    <dimen name="rowTopMargin">12dp </dimen>
+</resources>

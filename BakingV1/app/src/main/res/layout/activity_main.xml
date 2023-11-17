@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#0AA"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="Convert"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:gravity="center"
+
+
+            >
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/vMargin"
+        android:paddingBottom="@dimen/hMargin"
+        android:paddingRight="@dimen/hMargin"
+        android:paddingTop="@dimen/vMargin"
+        android:orientation="vertical">
+
+
+
+
+        <LinearLayout
+
+            android:id="@+id/amount_row"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/rowHeight"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/rowTopMargin"
+            android:weightSum="1"
+            >
+
+
+            <TextView
+
+
+                android:id="@+id/label_originalAmount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="original amount:"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:layout_weight=".5"
+                >
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edittext_inputAmount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/textEditBackground"
+                android:textColorHint="@color/textHint"
+                android:hint="0"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:layout_weight=".2"></EditText>
+
+            <Spinner
+                android:id="@+id/spinner_amount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:focusable="auto"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/servings_row"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/rowHeight"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/rowTopMargin">
+
+            <TextView
+                android:id="@+id/textview_originalServings"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="original servings:"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:layout_weight=".5">
+            </TextView>
+            <EditText
+                android:id="@+id/editText_newServings"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/textHint"
+                android:background="@color/textEditBackground"
+                android:text="0"
+                android:gravity="center"
+                android:inputType="number"
+                android:layout_weight=".5">
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/rowHeight"
+            android:layout_marginTop="@dimen/rowTopMargin"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textview_newServings"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="new servings:"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:layout_weight=".5"
+                >
+
+            </TextView>
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/textEditBackground"
+                android:textColor="@color/textHint"
+                android:gravity="center"
+                android:text="0"
+                android:inputType="number"
+                android:layout_weight=".5">
+
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_result"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/rowHeight"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/rowTopMargin"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textView_newAmount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="new amount: 0"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:layout_weight=".7">
+
+
+            </TextView>
+
+
+            <Spinner
+                android:id="@+id/spinner_result"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:spinnerMode="dropdown"
+                android:layout_weight=".3"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
+
+    <?ignore app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/edittext_amount"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/edittext_amount"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/edittext_amount"
+        app:layout_constraintEnd_toStartOf="@id/spinner_amount"
+        ?>

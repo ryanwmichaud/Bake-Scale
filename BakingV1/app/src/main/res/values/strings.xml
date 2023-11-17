@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BakingV1</string>
+
+
+    <string-array name="units_array">
+        <item>teaspoons</item>
+        <item>tablespoons</item>
+        <item>cups</item>
+        <item>liters</item>
+    </string-array>
+
+</resources>
